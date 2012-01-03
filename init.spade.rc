@@ -6,6 +6,10 @@ on early-init
     symlink /mnt/sdcard /sdcard
 
 on early-fs
+
+import init.spade.usb.rc
+
+on fs
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
@@ -143,9 +147,22 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     group bluetooth net_bt_admin
     disabled
 
+service udhcpd /system/bin/udhcpd
+    disabled
+    oneshot
+
+service netsharing_on /system/bin/netsharing net on
+    disabled
+    oneshot
+
+service netsharing_off /system/bin/netsharing net off
+    disabled
+    oneshot
+
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     class main
     user root
+    disabled
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     class main
@@ -164,3 +181,6 @@ on property:ro.build.tags=test-keys
 
 on property:ro.build.tags=release-keys
     start htc_ebdlogd_rel
+
+on property:ro.emmc=1
+    start rmt_storage
