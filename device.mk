@@ -56,7 +56,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.spade \
     lights.spade \
-    sensors.spade
+    sensors.spade \
+    camera.spade
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
