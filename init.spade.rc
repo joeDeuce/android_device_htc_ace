@@ -21,6 +21,7 @@ on fs
 
     mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
+    mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
@@ -53,6 +54,15 @@ on fs
     chown system system /sys/class/optical_sensors/proximity/ps_led
     chown system system /sys/class/optical_sensors/proximity/ps_test_mode
 
+    chown system system /sys/module/serial/parameters/modem_enabled
+    chown system system /dev/ttyHSUSB0
+    chown system system /dev/ttySA0
+    chown system system /dev/smd9
+
+    # SysFS bluetooth interface
+    chown bluetooth bluetooth /dev/ttyHS0
+    chmod 0600 /dev/ttyHS0
+
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -61,6 +71,7 @@ on fs
     # bluetooth MAC address programming
     chown bluetooth bluetooth /sys/module/board_spade/parameters/bdaddr
     setprop ro.bt.bdaddr_path /sys/module/board_spade/parameters/bdaddr
+
     # bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
 
