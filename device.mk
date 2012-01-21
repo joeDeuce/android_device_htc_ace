@@ -57,8 +57,7 @@ PRODUCT_PACKAGES += \
     gps.spade \
     lights.spade \
     sensors.spade \
-    camera.spade \
-    LibertySettings
+    camera.spade
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
