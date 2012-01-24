@@ -31,6 +31,7 @@
 /dev/system_bus_freq      0660    system    system
 /dev/cpu_dma_latency      0660    system    system
 /dev/gemini0              0660    system    camera
+/dev/msm_camera/*         0660    system    camera
 /dev/akm8975_daemon       0640    compass   system
 /dev/akm8975_aot          0640    compass   system
 /dev/ttyMSM0              0660   bluetooth  bluetooth

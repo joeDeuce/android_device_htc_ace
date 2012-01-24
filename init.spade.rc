@@ -91,14 +91,6 @@ on fs
     write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
     write /sys/block/mmcblk1/bdi/read_ahead_kb 1024
 
-    # Permissions for Camera
-    chmod 0666 /dev/msm_camera/config0
-    chmod 0666 /dev/msm_camera/control0
-    chmod 0666 /dev/msm_camera/frame0
-    chmod 0666 /dev/msm_camera/config1
-    chmod 0666 /dev/msm_camera/control1
-    chmod 0666 /dev/msm_camera/frame1
-    chmod 0666 /dev/graphics/fb0
 
     # Enable low memory killer to check file pages
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
