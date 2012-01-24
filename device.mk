@@ -186,6 +186,6 @@ $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 # htc audio settings
 $(call inherit-product, device/htc/ace/media_htcaudio.mk)
 
-$(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
+#$(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/htc/ace/device-vendor.mk)
