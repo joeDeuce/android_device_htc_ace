@@ -76,5 +76,5 @@ net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 #For USB mount
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
-
+persist.sys.nobootanimation=1
 ro.config.soundlock=false
