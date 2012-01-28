@@ -18,7 +18,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
-    device/htc/ace/gps.conf:system/etc/gps.conf
+    device/htc/ace/gps.conf:system/etc/gps.conf \
+    device/htc/ace/apns-conf.xml:system/etc/apns-conf.xml
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
