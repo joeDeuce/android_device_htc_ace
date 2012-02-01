@@ -123,6 +123,7 @@ PRODUCT_COPY_FILES += \
 
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
+    device/htc/ace/nam/CodecDSPID.txt:system/etc/nam/CodecDSPID.txt \
     device/htc/ace/nam/CodecDSPID_MCLK.txt:system/etc/nam/CodecDSPID_MCLK.txt \
     device/htc/ace/nam/Sound_Treble_Booster_MCLK.txt:system/etc/nam/Sound_Treble_Booster_MCLK.txt \
     device/htc/ace/nam/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/Sound_Vocal_Booster_MCLK.txt \
