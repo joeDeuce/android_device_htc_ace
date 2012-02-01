@@ -123,10 +123,6 @@ PRODUCT_COPY_FILES += \
 
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
-    device/htc/ace/nam/default.acdb:system/etc/nam/default.acdb \
-    device/htc/ace/nam/default_org.acdb:system/etc/nam/default_org.acdb \
-    device/htc/ace/nam/AdieHWCodec.csv:system/etc/nam/AdieHWCodec.csv \
-    device/htc/ace/nam/AIC3254_REG_DualMic_MCLK.csv:system/etc/nam/AIC3254_REG_DualMic_MCLK.csv \
     device/htc/ace/nam/CodecDSPID_MCLK.txt:system/etc/nam/CodecDSPID_MCLK.txt \
     device/htc/ace/nam/Sound_Treble_Booster_MCLK.txt:system/etc/nam/Sound_Treble_Booster_MCLK.txt \
     device/htc/ace/nam/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/Sound_Vocal_Booster_MCLK.txt \
@@ -155,7 +151,8 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/nam/Sound_Blues_MCLK.txt:system/etc/nam/Sound_Blues_MCLK.txt \
     device/htc/ace/nam/Sound_Classical_MCLK.txt:system/etc/nam/Sound_Classical_MCLK.txt \
     device/htc/ace/nam/Sound_Country_MCLK.txt:system/etc/nam/Sound_Country_MCLK.txt \
-    device/htc/ace/nam/gps.conf:system/etc/nam/gps.conf
+    device/htc/ace/nam/gps.conf:system/etc/nam/gps.conf \
+    device/htc/ace/nam/build.prop:system/etc/nam/build.prop
 
 # Alternate NAM gps.conf to NAM package
 # PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/nam/gps.conf
