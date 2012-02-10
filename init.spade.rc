@@ -125,32 +125,38 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
 
 service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     --baudrate 3000000 --patchram /vendor/firmware/bcm4329.hcd /dev/ttyHS0
+    classmain
     user bluetooth
     group bluetooth net_bt_admin
     disabled
 
 service udhcpd /system/bin/udhcpd
+    class main
     disabled
     oneshot
 
 service netsharing_on /system/bin/netsharing net on
+    class main
     disabled
     oneshot
 
 service netsharing_off /system/bin/netsharing net off
+    class main
     disabled
     oneshot
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
+    class main
     user root
-    disabled
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
+    class main
     user root
     disabled
     oneshot
 
 service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
+    class main
     user root
     disabled
     oneshot
