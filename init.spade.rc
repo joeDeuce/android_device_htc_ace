@@ -9,7 +9,7 @@ on early-fs
     mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
     mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
 
-import init.spade.usb.rc
+import init.htc7x30.usb.rc
 
 on boot
     mkdir /data/radio 0770 radio radio
