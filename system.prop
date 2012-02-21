@@ -65,7 +65,7 @@ dalvik.vm.heapsize=64m
 ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # For Ace China NEL
 ro.ril.update.org.acoustic=1
