@@ -181,4 +181,13 @@
         <item>25</item>
     </integer-array>
 
+    <!-- Show Galaxy Nexus navigation bar, and also turn off button backlights -->
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Reduce Galaxy nexus navigation bar height from 48.0dip > 32.0dip so it is smaller -->
+    <!-- <dimen name="navigation_bar_height">32.0dip</dimen> -->
+
+    <!-- Enable dual settings panel -->
+    <bool name="preferences_prefer_dual_pane">true</bool>
+
 </resources>
