@@ -6,10 +6,9 @@ ro.sf.lcd_density=240
 debug.fb.rgb565=0
 
 debug.sf.hw=1
-debug.composition.type=mdp
-debug.enabletr=false
-debug.qctwa.statusbar=1
-debug.qctwa.preservebuf=1
+debug.composition.type=dyn
+ro.sf.compbypass.enable=1
+dev.pm.dyn_samplingrate=1
 
 # cm qcom build lub
 com.qc.hardware=true
@@ -39,7 +38,7 @@ ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
-ro.ril.hsxpa=3
+ro.ril.hsxpa=2
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -77,4 +76,4 @@ net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
 dalvik.vm.dexopt-data-only=1
-ro.config.soundlock=true
+ro.camera.preview=true
