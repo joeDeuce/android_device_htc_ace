@@ -4,14 +4,15 @@ on early-fs
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
-    mount ext4 /dev/block/mmcblk0p25 /system wait ro noatime nodiratime barrier=0 nouser_xattr
-    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nodiratime nosuid nodev barrier=0 noauto_da_alloc nouser_xattr
-    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
-    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
+    mount ext4 /dev/block/mmcblk0p25 /system wait ro barrier=1
+    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
+    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
+    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
 
 import init.htc7x30.usb.rc
 
-on boot
+on post-fs-data
     mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
@@ -22,6 +23,19 @@ on boot
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
+
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
+
+on boot
+
+    chmod 0664 /sys/module/gpio_event/parameters/phone_call_status
+    chown radio system /sys/module/gpio_event/parameters/phone_call_status
+
+    chmod 0640 /sys/camera_led_status/led_ril_status
+    chown radio system /sys/camera_led_status/led_ril_status
+
+    chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
 
     chown system system /sys/module/serial/parameters/modem_enabled
     chown system system /dev/ttyHSUSB0
