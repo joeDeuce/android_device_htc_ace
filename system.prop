@@ -76,4 +76,7 @@ net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
 dalvik.vm.dexopt-data-only=1
+
 ro.camera.preview=true
+
+ro.config.play.bootsound=1
