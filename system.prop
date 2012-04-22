@@ -47,7 +47,7 @@ ro.telephony.default_network=0
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=100
 
-windowsmgr.max_events_per_sec=240
+windowsmgr.max_events_per_sec=150
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 
