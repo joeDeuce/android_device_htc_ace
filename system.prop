@@ -81,3 +81,6 @@ dalvik.vm.dexopt-data-only=1
 ro.camera.preview=true
 
 ro.config.play.bootsound=1
+
+# Disable kernel error checking
+ro.kernel.android.checkjni=0
