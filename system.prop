@@ -7,7 +7,7 @@ debug.fb.rgb565=0
 
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
-dev.pm.dyn_samplingrate=1
+dev.pm.dyn_samplingrate=0
 persist.sys.use_dithering=0
 debug.enabletr=true
 
