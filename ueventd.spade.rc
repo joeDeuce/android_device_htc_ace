@@ -12,6 +12,7 @@
 
 #video
 /dev/msm_vidc*          0660    system      graphics
+/dev/graphics/fb*       0666    system      graphics
 
 #audio
 /dev/htc-acdb           0660    system      audio
