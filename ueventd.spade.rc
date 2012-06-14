@@ -11,11 +11,7 @@
 /dev/akm8975_aot        0640    compass     system
 
 #video
-/dev/msm_vidc_dec       0660    system      audio
-/dev/msm_vidc_dec_sec   0660    system      audio
-/dev/msm_vidc_enc       0660    system      audio
-/dev/msm_vidc_reg       0660    system      audio
-/dev/graphics/fb*       0666    system      graphics
+/dev/msm_vidc*          0660    system      graphics
 
 #audio
 /dev/htc-acdb           0660    system      audio
@@ -50,3 +46,4 @@
 #camera
 /dev/gemini0            0660    system     camera
 /dev/msm_camera/*       0660    system     camera
+
