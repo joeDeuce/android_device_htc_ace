@@ -86,7 +86,3 @@ ro.config.play.bootsound=1
 
 # Disable kernel error checking
 ro.kernel.android.checkjni=0
-
-# Audio
-#lpa.decode=true
-#lpa.use-stagefright=true
