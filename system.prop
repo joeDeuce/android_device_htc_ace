@@ -75,7 +75,7 @@ ro.ril.update.org.acoustic=1
 # Define TCP buffer sizes
 net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 
-#For USB mount
+# For USB mount
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
 dalvik.vm.dexopt-data-only=1
@@ -86,3 +86,7 @@ ro.config.play.bootsound=1
 
 # Disable kernel error checking
 ro.kernel.android.checkjni=0
+
+# For Hardware Info under Settings/About
+ro.device.rear_cam=5MP
+ro.device.screen_res=480x800
