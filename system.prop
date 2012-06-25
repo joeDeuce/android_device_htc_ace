@@ -88,5 +88,5 @@ ro.config.play.bootsound=1
 ro.kernel.android.checkjni=0
 
 # For Hardware Info under Settings/About
-ro.device.rear_cam=5MP
+ro.device.rear_cam=8MP
 ro.device.screen_res=480x800
