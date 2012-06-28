@@ -88,5 +88,6 @@ ro.config.play.bootsound=1
 ro.kernel.android.checkjni=0
 
 # For Hardware Info under Settings/About
+ro.device.gpu=Adreno205
 ro.device.rear_cam=8MP
 ro.device.screen_res=480x800
